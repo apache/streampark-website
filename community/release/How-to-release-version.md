@@ -137,16 +137,16 @@ gpg:              unchanged: 1
 
 Or enter https://keyserver.ubuntu.com/ address in the browser, enter the name of the key and click 'Search key'
 
-![图片](https://github.com/apache/streampark/assets/19602424/b8fe193e-c137-42b0-a833-90a6d975f335)
+![key-server.png](/doc/image/release/key-server.png)
 
 If the query results are as follows, it means that the key is successfully created.
 
-![图片](https://github.com/apache/streampark/assets/19602424/73ada3f2-2d2e-4b76-b25c-34a52db6a069)
+![Search Key](/doc/image/release/search-key.png)
 
 ### 2.4 Add the gpg public key to the KEYS file of the Apache SVN project warehouse
 
-- Apache StreamPark Branch Dev https://dist.apache.org/repos/dist/dev/incubator/streampark
-- Apache StreamPark Branch Release https://dist.apache.org/repos/dist/release/incubator/streampark/
+- Apache StreamPark Branch Dev https://dist.apache.org/repos/dist/dev/streampark
+- Apache StreamPark Branch Release https://dist.apache.org/repos/dist/release/streampark
 
 ##### 2.4.1 Add public key to KEYS in dev branch
 
@@ -154,7 +154,7 @@ If the query results are as follows, it means that the key is successfully creat
 $ mkdir -p streampark_svn/dev
 $ cd streampark_svn/dev
 
-$ svn co https://dist.apache.org/repos/dist/dev/incubator/streampark
+$ svn co https://dist.apache.org/repos/dist/dev/streampark
 $ cd streampark_svn/dev/streampark
 
 # Append the KEY you generated to the file KEYS, and check if it is added correctly
@@ -169,7 +169,7 @@ $ svn ci -m "add gpg key for muchunjin"
 $ mkdir -p streampark_svn/release
 $ cd streampark_svn/release
 
-$ svn co https://dist.apache.org/repos/dist/release/incubator/streampark/
+$ svn co https://dist.apache.org/repos/dist/release/streampark/
 $ cd streampark_svn/release/streampark
 
 # Append the KEY you generated to the file KEYS, and check if it is added correctly
@@ -182,7 +182,7 @@ $ svn ci -m "add gpg key for muchunjin"
 
 ### 3.1 Based on dev or dev-2.1. x branch depending on the situation, create a `release-${release_version}-rcx` branch, such as release-2.1.0-rc1, And create a tag named v2.1.0-rc1 based on the release-2.1.0-rc1 branch, and set this tag as pre-release.
 
-![图片](https://user-images.githubusercontent.com/19602424/236656362-1d346faa-6582-44eb-9722-8bb2de0eaa92.png)
+![New Branches](/doc/image/release/new-branches.png)
 
 ### 3.2 clone release branch to local
 
@@ -284,9 +284,9 @@ apache-streampark_2.12-2.1.0-incubating-bin.tar.gz: OK
 
 ```shell
 # Check out the dev directory of the Apache SVN warehouse to the streampark_svn_dev directory under dist in the root directory of the Apache StreamPark project
-# svn co https://dist.apache.org/repos/dist/dev/incubator/streampark dist/streampark_svn_dev
+# svn co https://dist.apache.org/repos/dist/dev/streampark dist/streampark_svn_dev
 
-svn co --depth empty https://dist.apache.org/repos/dist/dev/incubator/streampark dist/streampark_svn_dev
+svn co --depth empty https://dist.apache.org/repos/dist/dev/streampark dist/streampark_svn_dev
 ```
 
 Create a version number directory and name it in the form of `${release_version}-${RC_version}`. RC_version starts from 1, that is, the candidate version starts from RC1. During the release process, there is a problem that causes the vote to fail. If it needs to be corrected, it needs to iterate the RC version , the RC version number needs to be +1. For example: Vote for version 2.1.0-RC1. If the vote passes without any problems, the RC1 version material will be released as the final version material. If there is a problem (when the streampark/incubator community votes, the voters will strictly check various release requirements and compliance issues) and need to be corrected, then re-initiate the vote after the correction, and the candidate version for the next vote is 2.1.0- RC2.
@@ -315,9 +315,9 @@ svn commit -m "release for StreamPark 2.1.0"
 
 ### 3.7 Check Apache SVN Commit Results
 
-> Visit the address https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1/ in the browser
+> Visit the address https://dist.apache.org/repos/dist/dev/streampark/ in the browser
 
-![图片](https://github.com/apache/streampark/assets/19602424/e4763537-af9f-4f2a-967d-912e6670b360)
+![Check Apache SVN](/doc/image/release/check-apache-svn.png)
 
 ## 4. Release Apache Nexus
 
@@ -437,7 +437,7 @@ mvn deploy \
 
 > Visit https://repository.apache.org/ and log in, if there are scala 2.11, scala 2.12, it means success.
 
-![图片](https://user-images.githubusercontent.com/19602424/236657233-08d142eb-5f81-427b-a04d-9ab3172199c1.png)
+![Apache Maven](/doc/image/release/asf-repo.png)
 
 ## 5. Enter the community voting stage
 
@@ -446,6 +446,7 @@ mvn deploy \
 Send a voting email in the community requires at least three `+1` and no `-1`.
 
 > `Send to`: dev@streampark.apache.org <br />
+> `cc`: private@streampark.apache.org <br /> 
 > `Title`: [VOTE] Release Apache StreamPark 2.1.0 rc1 <br />
 > `Body`: 
 
@@ -460,7 +461,7 @@ Release notes:
 https://streampark.apache.org/download/release-note/2.1.0/
 
 The release candidates:
-https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1/
+https://dist.apache.org/repos/dist/dev/streampark/2.1.0-RC1/
 
 Maven artifacts are available in a staging repository at:
 https://repository.apache.org/content/repositories/orgapachestreampark-1012/
@@ -469,7 +470,7 @@ Git tag for the release:
 https://github.com/apache/streampark/releases/tag/v2.1.0-rc1
 
 The artifacts signed with PGP key [05016886], corresponding to [muchunjin@apache.org], that can be found in keys file:
-https://downloads.apache.org/incubator/streampark/KEYS
+https://downloads.apache.org/streampark/KEYS
 
 The vote will be open for at least 72 hours or until the necessary number of votes are reached.
 
@@ -507,6 +508,7 @@ Thanks!
 After 72 hours, the voting results will be counted, and the voting result email will be sent, as follows.
 
 > `Send to`: dev@streampark.apache.org <br />
+> `cc`: private@streampark.apache.org <br /> 
 > `Title`: [RESULT][VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
 > `Body`:
 
@@ -542,85 +544,10 @@ Best,
 ChunJin Mu
 ```
 
-One item of the email content is `Vote thread`, and the link is obtained as follows: <br />
-Visit this address https://lists.apache.org/list.html?dev@streampark.apache.org, and find the mail title and click to display the voting content
-![图片](https://github.com/apache/streampark/assets/19602424/5755ed06-529f-4739-96a8-1ac13bbb21ea)
+If there is no -1 after 72 hours, reply to the email as follows.
 
-Right-click the title and click Copy Link Address to get the link
-![图片](https://github.com/apache/streampark/assets/19602424/1616da5b-7891-45cc-b956-a0ba5e7ce874)
-
-### 5.2 Send Incubator Community voting mail
-
-Send a voting email in the incubator community requires at least three `+1` and no `-1`.
-
-> `Send to`: general@incubator.apache.org <br />
-> `cc`: dev@streampark.apache.org、tison@apache.org、willem.jiang@gmail.com <br />
-> `Title`: [VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
-> `Body`:
-
-```
-Hello Incubator Community:
-
-This is a call for a vote to release Apache StreamPark version 2.1.0-RC1.
-The Apache StreamPark community has voted on and approved a proposal to release Apache StreamPark version 2.1.0-RC1.
-We now kindly request the Incubator PMC members review and vote on this incubator release.
-Apache StreamPark, Make stream processing easier! Easy-to-use streaming application development framework and operation platform.
-
-StreamPark community vote thread:
-https://lists.apache.org/thread/t01b2lbtqzyt7j4dsbdp5qjc3gngjsdq
-
-Vote result thread:
-https://lists.apache.org/thread/t5z58mvrs1drgzfyc48c9lhmd8skswn7
-
-The release candidate:
-https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1/
-
-Git tag for the release:
-https://github.com/apache/streampark/releases/tag/v2.1.0-rc1
-
-Maven artifacts are available in a staging repository at:
-https://repository.apache.org/content/repositories/orgapachestreampark-1012/
-
-The artifacts signed with PGP key [05016886], corresponding to [muchunjin@apache.org], that can be found in keys file:
-https://downloads.apache.org/incubator/streampark/KEYS
-
-The vote will be open for at least 72 hours or until the necessary number of votes are reached.
-
-Please vote accordingly:
-[ ] +1 approve
-[ ] +0 no opinion
-[ ] -1 disapprove with the reason
-
-More detailed checklist please refer:
-• https://cwiki.apache.org/confluence/display/INCUBATOR/Incubator+Release+Checklist
-
-Steps to validate the release， Please refer to:
-• https://www.apache.org/info/verification.html
-• https://streampark.apache.org/community/release/how_to_verify_release
-
-
-How to Build:
-
-1) clone source code:
-> git clone -b v2.1.0-rc1 git@github.com:apache/streampark.git
-
-2) build project:
-> cd streampark && sh ./build.sh
-
-
-Thanks,
-
-On behalf of Apache StreamPark community
-
-
-Best,
-ChunJin Mu
-```
-
-If there is no -1 after 72 hours, reply to the email as follows
-
-> `Send to`: general@incubator.apache.org <br />
-> `cc`: dev@streampark.apache.org <br />
+> `Send to`: dev@incubator.apache.org <br />
+> `cc`: private@streampark.apache.org <br />
 > `Body`:
 
 ```
@@ -630,10 +557,10 @@ Best,
 Chunjin Mu
 ```
 
-Then the voting results will be counted, and the voting result email will be sent, as follows.
+Then the voting results will be tallied, and the voting result email will be sent, as follows.
 
-> `Send to`: general@incubator.apache.org <br />
-> `cc`: dev@streampark.apache.org、tison@apache.org、willem.jiang@gmail.com <br />
+> `Send to`: dev@incubator.apache.org <br />
+> `cc`: private@streampark.apache.org <br />
 > `Title`: [RESULT][VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
 > `Body`:
 
@@ -664,18 +591,16 @@ ChunJin Mu
 ```
 
 One item of the email content is `Vote thread`, and the link is obtained as follows: <br />
-Visit this address https://lists.apache.org/list.html?general@incubator.apache.org, and find the mail title and click to display the voting content
-![图片](https://github.com/apache/streampark/assets/19602424/aea68925-7911-4413-8b2d-aea12685337f)
-Then right-click the title and click Copy Link Address to get the link.
+Visit this address https://lists.apache.org/list.html?dev@streampark.apache.org, and find the mail title and click to display the voting content
 
-Wait a day to see if the tutor has any other comments, if not, send the following announcement email
+![Vote Thread](/doc/image/release/mail-list.png)
 
 ## 6. Complete the final publishing steps
 
 ### 6.1 Migrating source and binary packages
 
 ```shell
-svn mv https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1 https://dist.apache.org/repos/dist/release/incubator/streampark/2.1.0  -m "transfer packages for 2.1.0-RC1"
+svn mv https://dist.apache.org/repos/dist/dev/streampark/2.1.0-RC1 https://dist.apache.org/repos/dist/release/streampark/2.1.0  -m "transfer packages for 2.1.0-RC1"
 ```
 
 ### 6.2 Publish releases in the Apache Staging repository
@@ -715,7 +640,7 @@ The final file content is as follows
 Open the official website address https://streampark.apache.org/download/ to see if there is a new version of the download
 > It should be noted that the download link may take effect after an hour, so please pay attention to it.
 
-![图片](https://github.com/apache/streampark/assets/19602424/e7900fb2-7bfc-4fa1-bd40-9806e6a822ef)
+![Download](/doc/image/release/download.png)
 
 ### 6.4 Generate a release on github
 
@@ -731,8 +656,7 @@ v2.1.0-incubating
 Release-2.1.0-incubating
 release note: https://streampark.apache.org/download/release-note/2.1.0
 ```
-
-![图片](https://github.com/apache/streampark/assets/19602424/84723ff5-a295-471d-8265-1b8ef867c3d1)
+![Tag](/doc/image/release/tag.png)
 
 Then click the `Publish release` button.
 
@@ -740,8 +664,8 @@ The rename the release-2.1.0-rc1 branch to release-2.1.0.
 
 ### 6.5 Send new version announcement email
 
-> `Send to`: general@incubator.apache.org <br />
-> `cc`: dev@streampark.apache.org <br />
+> `Send to`: dev@streampark.apache.org <br />
+> `cc`: private@streampark.apache.org <br />
 > `Title`: [ANNOUNCE] Release Apache StreamPark 2.1.0 <br />
 > `Body`:
 
@@ -766,4 +690,4 @@ Best,
 ChunJin Mu
 ```
 
-This version release is over.
+This version release is done.
