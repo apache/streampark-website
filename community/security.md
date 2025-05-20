@@ -23,4 +23,4 @@ Please specify the project name as "StreamPark" in the email, and provide a desc
 
 The Apache Security Team and the StreamPark community will get back to you after assessing and analyzing the findings.
 
-Please note that the security issue should be reported on the security email first, before disclosing it on any public domain.
+Please note that the security issue should be reported on the security email first, before disclosing it on any public domain. For more information see https://apache.org/security
