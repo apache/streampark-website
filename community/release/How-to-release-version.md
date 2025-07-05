@@ -455,7 +455,7 @@ Hello StreamPark Community:
 
 This is a call for vote to release Apache StreamPark version release-2.1.0-RC1.
 
-Apache Streamark - Make stream processing easier! Easy-to-use streaming application development framework and operation platform.
+Apache StreamPark - Make stream processing easier! Easy-to-use streaming application development framework and operation platform.
 
 Release notes:
 https://streampark.apache.org/download/release-note/2.1.0/
