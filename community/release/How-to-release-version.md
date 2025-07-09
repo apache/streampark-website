@@ -5,6 +5,12 @@ sidebar_position: 4
 ---
 
 This tutorial describes in detail how to release Apache StreamPark, take the release of version 2.1.0 as an example.
+Note: Version 2.1.0 was released during the incubation phase. 
+Starting from 2.1.6, StreamPark has officially graduated from incubation. 
+Therefore, when illustrating this example, we have removed the "incubating" label from version 2.1.0 to better demonstrate the release process 
+and make it more applicable to the release guidelines for versions 2.1.6 and beyond.
+
+It’s worth mentioning that if you encounter any issues in the releasing process, reaching out or asking for help in the dev@streampark.apache.org is a good option.
 
 ## 1. Environmental requirements
 
@@ -209,17 +215,17 @@ git clone -b release-2.1.0-rc1 -c core.autocrlf=false git@github.com:apache/stre
 ```shell
 git archive \
 --format=tar.gz \
---output="dist/apache-streampark-2.1.0-incubating-src.tar.gz" \
---prefix=apache-streampark-2.1.0-incubating-src/ \
+--output="dist/apache-streampark-2.1.0-src.tar.gz" \
+--prefix=apache-streampark-2.1.0-src/ \
 release-2.1.0-rc1
 ```
 
 > The following 3 files will be generated
 
 ```
-apache-streampark-2.1.0-incubating-src.tar.gz
-apache-streampark_2.11-2.1.0-incubating-bin.tar.gz
-apache-streampark_2.12-2.1.0-incubating-bin.tar.gz
+apache-streampark-2.1.0-src.tar.gz
+apache-streampark_2.11-2.1.0-bin.tar.gz
+apache-streampark_2.12-2.1.0-bin.tar.gz
 ```
 
 ### 3.4 Sign binary and source packages
@@ -237,15 +243,15 @@ for i in *.tar.gz; do echo $i; sha512sum $i > $i.sha512 ; done
 > The final file list is as follows
 
 ```
-apache-streampark-2.1.0-incubating-src.tar.gz
-apache-streampark-2.1.0-incubating-src.tar.gz.asc
-apache-streampark-2.1.0-incubating-src.tar.gz.sha512
-apache-streampark_2.11-2.1.0-incubating-bin.tar.gz
-apache-streampark_2.11-2.1.0-incubating-bin.tar.gz.asc
-apache-streampark_2.11-2.1.0-incubating-bin.tar.gz.sha512
-apache-streampark_2.12-2.1.0-incubating-bin.tar.gz
-apache-streampark_2.12-2.1.0-incubating-bin.tar.gz.asc
-apache-streampark_2.12-2.1.0-incubating-bin.tar.gz.sha512
+apache-streampark-2.1.0-src.tar.gz
+apache-streampark-2.1.0-src.tar.gz.asc
+apache-streampark-2.1.0-src.tar.gz.sha512
+apache-streampark_2.11-2.1.0-bin.tar.gz
+apache-streampark_2.11-2.1.0-bin.tar.gz.asc
+apache-streampark_2.11-2.1.0-bin.tar.gz.sha512
+apache-streampark_2.12-2.1.0-bin.tar.gz
+apache-streampark_2.12-2.1.0-bin.tar.gz.asc
+apache-streampark_2.12-2.1.0-bin.tar.gz.sha512
 ```
 
 ### 3.5 Verify signature
@@ -256,15 +262,15 @@ $ cd dist
 # Verify signature
 $ for i in *.tar.gz; do echo $i; gpg --verify $i.asc $i ; done
 
-apache-streampark-2.1.0-incubating-src.tar.gz
+apache-streampark-2.1.0-src.tar.gz
 gpg: Signature made Tue May  2 12:16:35 2023 CST
 gpg:                using RSA key 85778A4CE4DD04B7E07813ABACFB69E705016886
 gpg: Good signature from "muchunjin (for apache StreamPark release create at 20230501) <muchunjin@apache.org>" [ultimate]
-apache-streampark_2.11-2.1.0-incubating-bin.tar.gz
+apache-streampark_2.11-2.1.0-bin.tar.gz
 gpg: Signature made Tue May  2 12:16:36 2023 CST
 gpg:                using RSA key 85778A4CE4DD04B7E07813ABACFB69E705016886
 gpg: Good signature from "muchunjin (for apache StreamPark release create at 20230501) <muchunjin@apache.org>" [ultimate]
-apache-streampark_2.12-2.1.0-incubating-bin.tar.gz
+apache-streampark_2.12-2.1.0-bin.tar.gz
 gpg: Signature made Tue May  2 12:16:37 2023 CST
 gpg:                using RSA key 85778A4CE4DD04B7E07813ABACFB69E705016886
 gpg: BAD signature from "muchunjin (for apache StreamPark release create at 20230501) <muchunjin@apache.org>" [ultimate]
@@ -272,12 +278,12 @@ gpg: BAD signature from "muchunjin (for apache StreamPark release create at 2023
 # Verify SHA512
 $ for i in *.tar.gz; do echo $i; sha512sum --check $i.sha512; done
 
-apache-streampark-2.1.0-incubating-src.tar.gz
-apache-streampark-2.1.0-incubating-src.tar.gz: OK
-apache-streampark_2.11-2.1.0-incubating-bin.tar.gz
-apache-streampark_2.11-2.1.0-incubating-bin.tar.gz: OK
-apache-streampark_2.12-2.1.0-incubating-bin.tar.gz
-apache-streampark_2.12-2.1.0-incubating-bin.tar.gz: OK
+apache-streampark-2.1.0-src.tar.gz
+apache-streampark-2.1.0-src.tar.gz: OK
+apache-streampark_2.11-2.1.0-bin.tar.gz
+apache-streampark_2.11-2.1.0-bin.tar.gz: OK
+apache-streampark_2.12-2.1.0-bin.tar.gz
+apache-streampark_2.12-2.1.0-bin.tar.gz: OK
 ```
 
 ### 3.6 Publish the dev directory of the Apache SVN warehouse of the material package
@@ -305,12 +311,12 @@ cd dist/streampark_svn_dev/
 svn status
 
 # 2. add to svn
-svn add 2.0.0-RC1
+svn add 2.1.0-RC1
 
 svn status
 
 # 3. Submit to svn remote server
-svn commit -m "release for StreamPark 2.1.0"
+svn commit -m "Release for StreamPark 2.1.0"
 ```
 
 ### 3.7 Check Apache SVN Commit Results
@@ -505,10 +511,23 @@ How to Build:
 Thanks!
 ```
 
+If there is no -1 after 72 hours, reply to the email as follows.
+
+> `Send to`: dev@streampark.apache.org <br />
+> `cc`: private@streampark.apache.org <br />
+> `Body`:
+
+```
+Thanks everyone for review and vote, 72H passed. I'll announce the vote result soon.
+
+Best,
+Chunjin Mu
+```
+
 After 72 hours, the voting results will be counted, and the voting result email will be sent, as follows.
 
 > `Send to`: dev@streampark.apache.org <br />
-> `cc`: private@streampark.apache.org <br /> 
+> `cc`: private@streampark.apache.org <br />
 > `Title`: [RESULT][VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
 > `Body`:
 
@@ -537,54 +556,8 @@ Vote thread:
 https://lists.apache.org/thread/t01b2lbtqzyt7j4dsbdp5qjc3gngjsdq
 
 
-Thank you to everyone who helped us to verify and vote for this release. We will move to the ASF Incubator voting shortly.
+Thank you to everyone who helped us to verify and vote for this release. The StreamPark team will take the steps to complete this release and will announce it soon.
 
-
-Best,
-ChunJin Mu
-```
-
-If there is no -1 after 72 hours, reply to the email as follows.
-
-> `Send to`: dev@incubator.apache.org <br />
-> `cc`: private@streampark.apache.org <br />
-> `Body`:
-
-```
-Thanks everyone for review and vote, 72H passed. I'll announce the vote result soon.
-
-Best,
-Chunjin Mu
-```
-
-Then the voting results will be tallied, and the voting result email will be sent, as follows.
-
-> `Send to`: dev@incubator.apache.org <br />
-> `cc`: private@streampark.apache.org <br />
-> `Title`: [RESULT][VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
-> `Body`:
-
-```
-Hi all,
-
-Thanks for your review and vote for "Release Apache StreamPark 2.1.0-rc1"
-I'm happy to announce the vote has passed:
-
-3 binding votes, no +0 or -1 votes.
-Thanks for reviewing and voting.
-
-+3 (binding) +1, from:
-- tison
-- Gang Li
-- Willem Jiang
-
-no 0 or -1 votes.
-
-Vote thread:
-https://lists.apache.org/thread/k3cvcbzxqs6qy62d1o6r9pqpykcgvvhm
-
-
-Thanks everyone for your feedback and help with StreamPark apache release. The StreamPark team will take the steps to complete this release and will announce it soon.
 
 Best,
 ChunJin Mu
@@ -649,11 +622,11 @@ Create a tag named v2.1.0 based on the release-2.1.0-rc1 branch, and set this ta
 Then enter Release Title and Describe
 - Release Title: 
 ```
-v2.1.0-incubating
+v2.1.0
 ```
 - Describe:
 ```
-Release-2.1.0-incubating
+Release-2.1.0
 release note: https://streampark.apache.org/download/release-note/2.1.0
 ```
 ![Tag](/doc/image/release/tag.png)
