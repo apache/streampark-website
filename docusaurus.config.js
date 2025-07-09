@@ -160,7 +160,7 @@ const config = {
               },
               {
                 label: "Security",
-                to: "https://www.apache.org/security/",
+                to: "/community/security/",
               },
               {
                 label: "Sponsorship",
