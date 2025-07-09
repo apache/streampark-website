@@ -633,7 +633,7 @@ release note: https://streampark.apache.org/download/release-note/2.1.0
 
 Then click the `Publish release` button.
 
-The rename the release-2.1.0-rc1 branch to release-2.1.0.
+Then rename the release-2.1.0-rc1 branch to release-2.1.0.
 
 ### 6.5 Send new version announcement email
 
