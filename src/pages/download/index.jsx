@@ -47,7 +47,7 @@ export default function () {
         <p>
            <span>
               {dataSource.downloadText} <a
-               href="https://downloads.apache.org/incubator/streampark/KEYS">PGP KEYS </a> {dataSource.verifyDesc1} :
+               href="https://downloads.apache.org/streampark/KEYS">PGP KEYS </a> {dataSource.verifyDesc1} :
           </span>
 
           <li> {dataSource.verifyStep1} </li>
