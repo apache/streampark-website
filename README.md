@@ -5,7 +5,7 @@
 [English](README.md) | [中文](README_ZH.md)
 
 This is the repository containing all the source code of `http://streampark.apache.org`.
-This guide will guide you how to contribute to the Apache StreamPark™ (Incubating) website.
+This guide will guide you how to contribute to the Apache StreamPark™ website.
 
 ## Branch
 
@@ -18,7 +18,7 @@ This website is compiled using Node.js (version >=18), using [Docusaurus (3.3.2)
 To download and preview the website:
 
 ```shell
-git clone https://github.com/apache/incubator-streampark-website.git streampark-website
+git clone https://github.com/apache/streampark-website.git streampark-website
 cd streampark-website
 pnpm install
 pnpm run start

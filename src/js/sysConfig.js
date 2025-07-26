@@ -1,9 +1,9 @@
 const  systemConfiguration={
     github:{
-        "projectUrl":"https://github.com/apache/incubator-streampark",
-        "projectReleaseUrl":"https://github.com/apache/incubator-streampark/releases",
-        "projectIssueUrl":"https://github.com/apache/incubator-streampark/issues",
-        "projectPrUrl":"https://github.com/apache/incubator-streampark/pulls",
+        "projectUrl":"https://github.com/apache/streampark",
+        "projectReleaseUrl":"https://github.com/apache/streampark/releases",
+        "projectIssueUrl":"https://github.com/apache/streampark/issues",
+        "projectPrUrl":"https://github.com/apache/streampark/pulls",
     },
 }
 export  default systemConfiguration

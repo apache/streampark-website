@@ -25,7 +25,7 @@ sidebar_position: 1
 
 ## 获取文档项目
 
-StreamPark 项目的文档在一个单独的 [git 仓库](https://github.com/apache/incubator-streampark-website) 中维护。
+StreamPark 项目的文档在一个单独的 [git 仓库](https://github.com/apache/streampark-website) 中维护。
 
 首先，您需要将文档项目 fork 到您自己的 github 仓库，然后将文`clone`到您的本地计算机。
 

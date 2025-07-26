@@ -1,7 +1,7 @@
 {
   "zh-CN": {
-    "download": "下载 Apache StreamPark (incubating)",
-    "downloadDesc1": "Apache StreamPark 支持 Scala 2.11 和 2.12 两个版本，提供的二进制安装包文件名规则是：apache-streampark_${scala.version}-${streampark.version}-incubating-bin.tar.gz，如：",
+    "download": "下载 Apache StreamPark",
+    "downloadDesc1": "Apache StreamPark 支持 Scala 2.11 和 2.12 两个版本，提供的二进制安装包文件名规则是：apache-streampark_${scala.version}-${streampark.version}-bin.tar.gz，如：",
     "downloadDesc2": "这里的 2.11/2.12 为 StreamPark 适配 Scala 的版本，2.1.4 则为 StreamPark 的版本，下载哪个文件，取决于用户的 Apache Flink/Spark 的 Scala 版本， 下载和 Apache Flink/Spark 的 Scala 版本匹配的 StreamPark 安装包即可。",
     "latestVersion": "最新版本",
     "archived": "所有存档的版本",
@@ -15,12 +15,19 @@
       "binary": "二进制包",
       "releaseNotes": "发布记录"
     },
-    "releaseNotes": "发布记录"
+    "releaseNotes": "发布记录",
+    "verifyReleases": "验证发版",
+    "verifyDesc": "你需要使用 PGP 或 SHA 签名验证下载文件的完整性，请下载 KEYS 以及 .asc/.sha512 签名文件以供相关验证，下载文件后，你应该验证相关签名，并确保它与我们的签名一致。",
+    "downloadText": "下载",
+    "verifyDesc1": "以及带有 .asc 签名的文件，然后按照下面的步骤进行验证",
+    "verifyStep1": "将 KEYS 文件导入到你的 GPG 密钥：",
+    "verifyStep2": "使用以下命令验证发布文件的签名：",
+    "verifyStep3": "你需要下载发布文件和该文件的 .sha512 文件。然后通过以下命令进行验证："
   },
   "en": {
-    "download": "Download Apache StreamPark (incubating)",
-    "downloadDesc1": "The Apache StreamPark supports Scala 2.11 and 2.12. The dist file name rule is: apache-streampark_${scala.version}-${streampark.version}-incubating-bin.tar.gz，e.g:",
-    "downloadDesc2": "The 2.11/2.12 is a version of StreamPark adapted to Scala, the 2.1.4 is a version of StreamPark. Download which one depends on the user's Scala version of Apache Flink/Spark, users need to download the file of StreamPark that matches the Scala version of Apache Flink/Spark.",
+    "download": "Download Apache StreamPark",
+    "downloadDesc1": "The Apache StreamPark supports Scala 2.11 and 2.12. The dist file name rule is: apache-streampark_${scala.version}-${streampark.version}-bin.tar.gz，e.g:",
+    "downloadDesc2": "The 2.11/2.12 is a version of StreamPark adapted to Scala, the 2.1.5 is a version of StreamPark. Download which one depends on the user's Scala version of Apache Flink/Spark, users need to download the file of StreamPark that matches the Scala version of Apache Flink/Spark.",
     "latestVersion": "The latest release",
     "archived": "All archived releases",
     "instructions": "Instructions",
@@ -33,6 +40,13 @@
       "binary": "Binary",
       "releaseNotes": "Release notes"
     },
-    "releaseNotes": "release notes"
+    "releaseNotes": "release notes",
+    "verifyReleases": "Verify the releases",
+    "verifyDesc": "It is essential that you verify the integrity of the downloaded files using the PGP or SHA signatures. Please download the KEYS as well as the .asc/.sha512 signature files for relevant distribution. After you download the file, you should calculate a checksum for your download, and make sure it is the same as ours.",
+    "downloadText": "Download",
+    "verifyDesc1": "and the release with its .asc signature file. And then",
+    "verifyStep1": "Import the KEYS file to your GPG keyring:",
+    "verifyStep2": "Verify the signature of the release artifact using the following command:",
+    "verifyStep3": "You will need to download both the release artifact and the .sha512 checksum file for that artifact. Then verify the checksum by:"
   }
 }

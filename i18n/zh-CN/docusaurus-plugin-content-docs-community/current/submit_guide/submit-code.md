@@ -21,7 +21,7 @@ sidebar_position: 2
     limitations under the License.
 -->
 
-1. 首先从远程仓库 https://github.com/apache/incubator-streampark.git 将代码的一份副本 fork 到你自己的仓库。
+1. 首先从远程仓库 https://github.com/apache/streampark.git 将代码的一份副本 fork 到你自己的仓库。
 
 2. 将你的仓库 Clone 到本地设备：
 
@@ -32,7 +32,7 @@ sidebar_position: 2
 3. 添加远程仓库地址：
 
     ```shell
-    git remote add upstream https://github.com/apache/incubator-streampark.git
+    git remote add upstream https://github.com/apache/streampark.git
     ```
 
 4. 查看仓库：

@@ -37,43 +37,17 @@ export default function () {
             <h3 className="fs-2 mb-4 fw-bold text-center">StreamPark Team</h3>
             <hr className="divider my-4 mx-auto" style={{ maxWidth: "10rem" }}></hr>
             <p className="team_desc team_indent">{dataSource.info.desc}</p>
-            <h3 className="team_title">
-              Mentor
-              <span className="desc">{dataSource.info.tip}</span>
-            </h3>
-            <div className="team-group">
-              {
-                dataSource.mentor.map((item, i) => (
-                  <div className='team-box my-3' key={i} data-aos="fade-up" data-aos-delay={i * 100}>
-                    <div className="hover-top-in text-center" >
-                      <div className="team-user overflow-hidden z-index-1 position-relative px-5 d-flex justify-content-center">
-                        <img className="team-user-img" src={avatarUrl(item.githubId)} title="" alt="" />
-                      </div>
-                      <div className="position-relative bg-team text-center hover-top--in">
-                        <h6 className="font-weight-bold team-name mb-1">{item.name}</h6>
-                        <small>{getGitName(item.gitUrl)}</small>
-                        <div className="pt-2">
-                          <a className="icon-sm team-link" href={item.gitUrl}>
-                            <Github className="github-icon" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))
-              }
-            </div>
 
             <h3 className="team_title">
-              PPMC
+              PMC
               <span className="desc">{dataSource.info.tip}</span>
             </h3>
             <div className="team-group">
               {
-                dataSource.PPMC.map((item, i) => (
+                dataSource.PMC.map((item, i) => (
                   <div className='team-box my-3' key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                     <div className="hover-top-in text-center" >
-                      <div className="team-user overflow-hidden z-index-1 position-relative px-5 d-flex justify-content-center">
+                      <div className="team-user overflow-hidden z-10 position-relative px-5 d-flex justify-content-center">
                         <img className="team-user-img" src={avatarUrl(item.githubId)} title="" alt="" />
                       </div>
                       <div className="position-relative bg-team text-center hover-top--in">
@@ -100,7 +74,7 @@ export default function () {
                 dataSource.committer.map((item, i) => (
                   <div className='team-box my-3' key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                     <div className="hover-top-in text-center" >
-                      <div className="team-user overflow-hidden z-index-1 position-relative px-5 d-flex justify-content-center">
+                      <div className="team-user overflow-hidden z-10 position-relative px-5 d-flex justify-content-center">
                         <img className="team-user-img" src={avatarUrl(item.githubId)} title="" alt="" />
                       </div>
                       <div className="position-relative bg-team text-center hover-top--in">

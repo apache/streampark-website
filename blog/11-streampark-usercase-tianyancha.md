@@ -113,7 +113,7 @@ In the StreamPark landing practice, we also encountered some problems, which are
 ### **Huawei Cloud has compatibility issues with open source Hadoop**
 
 Our jobs are in Flink on Yarn mode and deployed in Huawei Cloud. During the process of using StreamPark to deploy jobs, we found that the jobs can be successfully deployed to Huawei Hadoop cluster, but the request for Yarn ResourceManager was rejected when getting the job status information, so we communicated with the community in time to find a solution, and logged the issue.
-https://github.com/apache/incubator-streampark/issues/3566
+https://github.com/apache/streampark/issues/3566
 
 We communicated with the community to seek a solution, and recorded the issue: . Finally, with the assistance of Mr. Huajie, a community PMC member, and Huawei Cloud students, we successfully resolved the issue: StreamPark could not access the cloud ResourceManager properly due to the internal security authentication mechanism of the cloud product itself.
 
@@ -162,7 +162,7 @@ In the process of intensive use, we also found some problems. In order to better
 
 ## **Benefits derived**
 
-Apache StreamPark has brought us significant benefits,**mainly in its one-stop service capability, which enables business developers to complete the development, compilation, submission and management of Flink jobs** on a unified platform. It greatly saves our time on Flink job development and deployment, significantly improves development efficiency, and realizes full-process automation from user rights management to Git deployment, task submission, alerting, and automatic recovery, effectively solving the complexity of Apache Flink operation and maintenance.
+Apache StreamPark has brought us significant benefits,**mainly in its one-stop service capability, which enables business developers to complete the development, compilation, submission and management of Flink jobs** on a unified platform. It greatly saves our time on Flink job development and deployment, significantly improves development efficiency, and realizes full-process automation from user rights management to Git deployment, task submission, alerting, and automatic recovery, effectively solving the complexity of Apache Flink® operation and maintenance.
 
 ![](/blog/tianyancha/earnings.png)
 

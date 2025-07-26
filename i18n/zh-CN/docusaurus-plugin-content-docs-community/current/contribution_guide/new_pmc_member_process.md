@@ -69,13 +69,13 @@ Subject: [VOTE] New PMC member candidate: ${NEW_PMC_NAME}
 ```
 
 ```text
-Hi StreamPark PPMC,
+Hi StreamPark PMC,
 
 This is a formal vote about inviting ${NEW_PMC_NAME} as our new PMC member.
 
 ${Work list}[1]
 
-[1] https://github.com/apache/incubator-streampark/commits?author=${NEW_PMC_NAME}
+[1] https://github.com/apache/streampark/commits?author=${NEW_PMC_NAME}
 ```
 
 注意，投票将在今天一周后结束，即
@@ -91,7 +91,7 @@ Subject: [RESULT] [VOTE] New PMC member: ${NEW_PMC_NAME}
 ```
 
 ```text
-Hi StreamPark PPMC,
+Hi StreamPark PMC,
 
 The vote has now closed. The results are:
 
@@ -221,7 +221,7 @@ requires adherence to the ASF Code of Conduct:
   https://www.apache.org/foundation/policies/conduct.html
 
 Yours,
-The Apache StreamPark PPMC
+The Apache StreamPark PMC
 ```
 
 ### PMC成员完成模板
@@ -255,7 +255,7 @@ Naturally, if you don't understand anything be sure to ask us on the dev@streamp
 Documentation is maintained by volunteers and hence can be out-of-date and incomplete - of course
 you can now help fix that.
 
-A PPMC member will announce your election to the dev list soon.
+A PMC member will announce your election to the dev list soon.
 ```
 
 ### PMC成员通知模板
@@ -268,7 +268,7 @@ To: dev@streampark.apache.org
 ```text
 Hi StreamPark Community,
 
-The Podling Project Management Committee (PPMC) for Apache StreamPark
+The Project Management Committee (PMC) for Apache StreamPark
 has invited ${NEW_PMC_NAME} to become our PMC member and
 we are pleased to announce that he has accepted.
 
@@ -279,8 +279,8 @@ Please join me in congratulating ${NEW_PMC_NAME}!
 Being a committer enables easier contribution to the
 project since there is no need to go via the patch
 submission process. This should enable better productivity.
-A PPMC member helps manage and guide the direction of the project.
+A PMC member helps manage and guide the direction of the project.
 
 Thanks,
-On behalf of the Apache StreamPark (Incubating) PPMC
+On behalf of the Apache StreamPark PMC
 ```

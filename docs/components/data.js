@@ -94,7 +94,7 @@ export default {
     ],
 
     deploymentEnvs: [
-        {name: 'OS', version: 'Linux', required: true, other: 'UnSupport Windows'},
+        {name: 'OS', version: 'Linux', required: true, other: 'Unsupported Windows'},
         {name: 'JAVA', version: '1.8+', required: true, other: null},
         {name: 'MySQL', version: '5.6+', required: true, other: null},
         {name: 'Flink', version: '1.12.0+', required: true, other: 'Flink version >= 1.12'},

@@ -104,7 +104,7 @@ kappa 架构只用一套数据流处理架构来解决离线和实时数据，�
 
 本方案采用 Flink Application On K8s 集群，Flink CDC 实时摄取业务系统关系型数据库数据，通过 StreamPark 任务平台提交 Flink + Paimon Streaming Data Warehouse 任务， 最后采用 Trino 引擎接入 Finereport 提供服务和开发人员的查询。Paimon 底层存储支持 S3 协议，因为公司大数据服务依赖于阿里云所以使用对象存储OSS作为数据文件系统。
 
-[StreamPark](https://github.com/apache/incubator-streampark) 是一个实时计算平台，与 [Paimon](https://github.com/apache/incubator-paimon) 结合使用其强大功能来处理实时数据流。此平台提供以下主要功能：
+[StreamPark](https://github.com/apache/streampark) 是一个实时计算平台，与 [Paimon](https://github.com/apache/incubator-paimon) 结合使用其强大功能来处理实时数据流。此平台提供以下主要功能：
 
 **实时数据处理：**StreamPark 支持提交实时数据流任务，能够实时获取、转换、过滤和分析数据。这对于需要快速响应实时数据的应用非常重要，例如实时监控、实时推荐和实时风控等领域。
 

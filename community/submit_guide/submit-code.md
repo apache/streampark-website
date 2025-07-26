@@ -21,7 +21,7 @@ sidebar_position: 2
     limitations under the License.
 -->
 
-1. First, fork the upstream repository https://github.com/apache/incubator-streampark.git into your own repository.
+1. First, fork the upstream repository https://github.com/apache/streampark.git into your own repository.
 
 2. Clone your repository to your local:
 
@@ -32,7 +32,7 @@ sidebar_position: 2
 3. Add remote repository address, name it upstream:
 
     ```shell
-    git remote add upstream https://github.com/apache/incubator-streampark.git
+    git remote add upstream https://github.com/apache/streampark.git
     ```
 
 4. View repository:

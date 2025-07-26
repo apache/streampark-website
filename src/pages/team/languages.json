@@ -5,34 +5,17 @@
       "tip": "(排名不分先后)",
       "contributors": "感谢所有为 StreamPark 做出贡献的贡献者们！"
     },
-    "mentor" : [
+    "PMC": [
       {
-        "githubId": "18818196",
-        "gitUrl": "https://github.com/tisonkun",
-        "name": "tison"
-      },
-      {
-        "githubId": "219644",
-        "gitUrl": "https://github.com/WillemJiang",
-        "name": "Willem Ning Jiang"
+        "githubId": "19602424",
+        "gitUrl": "https://github.com/macksonmu",
+        "name": "Chunjin Mu"
       },
       {
         "githubId": "4958168",
         "gitUrl": "https://github.com/Apache9",
         "name": "Duo Zhang"
       },
-      {
-        "githubId": "1727146",
-        "gitUrl": "https://github.com/StephanEwen",
-        "name": "Stephan Ewen"
-      },
-      {
-        "githubId": "263695",
-        "gitUrl": "https://github.com/tweise",
-        "name": "Thomas Weise"
-      }
-    ],
-    "PPMC": [
       {
         "githubId": "13284744",
         "gitUrl": "https://github.com/wolfboys",
@@ -44,24 +27,9 @@
         "name": "Linying Yu"
       },
       {
-        "githubId": "60029759",
-        "gitUrl": "https://github.com/MonsterChenzhuo",
-        "name": "Zhuoyu Chen"
-      },
-      {
         "githubId":"5511181",
         "gitUrl":"https://github.com/GuoNingNing",
         "name":"Ning Guo"
-      },
-      {
-        "githubId": "7881241",
-        "gitUrl": "https://github.com/xinzhuxiansheng",
-        "name": "Yang Zhou"
-      },
-      {
-        "githubId": "29084491",
-        "gitUrl": "https://github.com/lvshaokang",
-        "name": "Shaokang Lv"
       },
       {
         "githubId": "45427129",
@@ -69,14 +37,34 @@
         "name": "Qingrong Wang"
       },
       {
-        "githubId": "19602424",
-        "gitUrl": "https://github.com/macksonmu",
-        "name": "Chunjin Mu"
+        "githubId": "29084491",
+        "gitUrl": "https://github.com/lvshaokang",
+        "name": "Shaokang Lv"
       },
       {
         "githubId": "39726513",
         "gitUrl": "https://github.com/wangsizhu0504",
         "name": "Sizhu Wang"
+      },
+      {
+        "githubId": "18818196",
+        "gitUrl": "https://github.com/tisonkun",
+        "name": "tison"
+      },
+      {
+        "githubId": "219644",
+        "gitUrl": "https://github.com/WillemJiang",
+        "name": "Willem Ning Jiang"
+      },
+      {
+        "githubId": "7881241",
+        "gitUrl": "https://github.com/xinzhuxiansheng",
+        "name": "Yang Zhou"
+      },
+      {
+        "githubId": "60029759",
+        "gitUrl": "https://github.com/MonsterChenzhuo",
+        "name": "Zhuoyu Chen"
       }
     ],
     "committer" : [
@@ -108,7 +96,17 @@
       {
         "githubId": "52746628",
         "gitUrl": "https://github.com/VampireAchao",
-        "name": "achao"
+        "name": "Chao Zhang"
+      },
+      {
+        "githubId": "17822915",
+        "gitUrl": "https://github.com/SbloodyS",
+        "name": "Zihao Xiang"
+      },
+      {
+        "githubId": "125547374",
+        "gitUrl": "https://github.com/ChengJie1053",
+        "name": "Jie Cheng"
       }
     ]
   },
@@ -118,34 +116,17 @@
       "tip": "(In no particular order)",
       "contributors": "Thanks all the contributors who already contributed to StreamPark!"
     },
-    "mentor" : [
+    "PMC": [
       {
-        "githubId": "18818196",
-        "gitUrl": "https://github.com/tisonkun",
-        "name": "tison"
-      },
-      {
-        "githubId": "219644",
-        "gitUrl": "https://github.com/WillemJiang",
-        "name": "Willem Ning Jiang"
+        "githubId": "19602424",
+        "gitUrl": "https://github.com/macksonmu",
+        "name": "Chunjin Mu"
       },
       {
         "githubId": "4958168",
         "gitUrl": "https://github.com/Apache9",
         "name": "Duo Zhang"
       },
-      {
-        "githubId": "1727146",
-        "gitUrl": "https://github.com/StephanEwen",
-        "name": "Stephan Ewen"
-      },
-      {
-        "githubId": "263695",
-        "gitUrl": "https://github.com/tweise",
-        "name": "Thomas Weise"
-      }
-    ],
-    "PPMC": [
       {
         "githubId": "13284744",
         "gitUrl": "https://github.com/wolfboys",
@@ -157,24 +138,9 @@
         "name": "Linying Yu"
       },
       {
-        "githubId": "60029759",
-        "gitUrl": "https://github.com/MonsterChenzhuo",
-        "name": "Zhuoyu Chen"
-      },
-      {
         "githubId":"5511181",
         "gitUrl":"https://github.com/GuoNingNing",
         "name":"Ning Guo"
-      },
-      {
-        "githubId": "7881241",
-        "gitUrl": "https://github.com/xinzhuxiansheng",
-        "name": "Yang Zhou"
-      },
-      {
-        "githubId": "29084491",
-        "gitUrl": "https://github.com/lvshaokang",
-        "name": "Shaokang Lv"
       },
       {
         "githubId": "45427129",
@@ -182,14 +148,34 @@
         "name": "Qingrong Wang"
       },
       {
-        "githubId": "19602424",
-        "gitUrl": "https://github.com/macksonmu",
-        "name": "Chunjin Mu"
+        "githubId": "29084491",
+        "gitUrl": "https://github.com/lvshaokang",
+        "name": "Shaokang Lv"
       },
       {
         "githubId": "39726513",
         "gitUrl": "https://github.com/wangsizhu0504",
         "name": "Sizhu Wang"
+      },
+      {
+        "githubId": "18818196",
+        "gitUrl": "https://github.com/tisonkun",
+        "name": "tison"
+      },
+      {
+        "githubId": "219644",
+        "gitUrl": "https://github.com/WillemJiang",
+        "name": "Willem Ning Jiang"
+      },
+      {
+        "githubId": "7881241",
+        "gitUrl": "https://github.com/xinzhuxiansheng",
+        "name": "Yang Zhou"
+      },
+      {
+        "githubId": "60029759",
+        "gitUrl": "https://github.com/MonsterChenzhuo",
+        "name": "Zhuoyu Chen"
       }
     ],
     "committer" : [
@@ -221,7 +207,17 @@
       {
         "githubId": "52746628",
         "gitUrl": "https://github.com/VampireAchao",
-        "name": "achao"
+        "name": "Chao Zhang"
+      },
+      {
+        "githubId": "17822915",
+        "gitUrl": "https://github.com/SbloodyS",
+        "name": "Zihao Xiang"
+      },
+      {
+        "githubId": "125547374",
+        "gitUrl": "https://github.com/ChengJie1053",
+        "name": "Jie Cheng"
       }
     ]
   }

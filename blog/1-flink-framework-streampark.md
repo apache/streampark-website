@@ -244,7 +244,7 @@ It's a universal truth that innovations aren't perfect from the outset. Although
 
 Resources:
 
-StreamPark GitHub: [https://github.com/apache/incubator-streampark](https://github.com/apache/incubator-streampark) <br/>
+StreamPark GitHub: [https://github.com/apache/streampark](https://github.com/apache/streampark) <br/>
 Doris GitHub: [https://github.com/apache/doris](https://github.com/apache/doris)
 
 ![](/blog/belle/author.png)

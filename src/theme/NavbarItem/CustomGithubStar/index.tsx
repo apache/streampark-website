@@ -10,7 +10,7 @@ export default function CustomGithubStar(): JSX.Element {
     return (
         <a
             key='github-stars-nav'
-            href='https://github.com/apache/incubator-streampark'
+            href='https://github.com/apache/streampark'
             target='_blank'
             className={styles.githubStars}>
             <div className={styles.githubStarsContainer}>

@@ -246,7 +246,7 @@ Native-Session 模式需要事先使用 Flink 命令创建一个运行在 K8s �
 
 附：
 
-StreamPark GitHub：[https://github.com/apache/incubator-streampark](https://github.com/apache/incubator-streampark) <br/>
+StreamPark GitHub：[https://github.com/apache/streampark](https://github.com/apache/streampark) <br/>
 Doris GitHub：[https://github.com/apache/doris](https://github.com/apache/doris)
 
 ![](/blog/belle/author.png)

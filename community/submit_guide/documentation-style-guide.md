@@ -96,8 +96,8 @@ to do better.
 ## References
 
 - https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-Hans.md
-- https://github.com/apache/incubator-streampark-website/pull/347
-- https://github.com/apache/incubator-streampark-website/pull/349
+- https://github.com/apache/streampark-website/pull/347
+- https://github.com/apache/streampark-website/pull/349
 - https://cwiki.apache.org/confluence/display/FLINK/Flink+Translation+Specifications
 - https://lists.apache.org/thread/0p40kdbkoqdto2zlvwbw3r9xo3hfnm4g
 - [Guidelines for Using Capital Letters - ThoughtCo.](https://www.thoughtco.com/guidelines-for-using-capital-letters-1691724)

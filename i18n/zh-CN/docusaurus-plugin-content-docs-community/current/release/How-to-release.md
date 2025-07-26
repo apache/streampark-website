@@ -137,11 +137,11 @@ gpg:              unchanged: 1
 
 或者进入 https://keyserver.ubuntu.com/ 网址，输入密钥的名称，然后点击'Search key'
 
-![图片](https://github.com/apache/incubator-streampark/assets/19602424/b8fe193e-c137-42b0-a833-90a6d975f335)
+![图片](https://github.com/apache/streampark/assets/19602424/b8fe193e-c137-42b0-a833-90a6d975f335)
 
 如果查询结果如下，表示密钥创建成功。
 
-![图片](https://github.com/apache/incubator-streampark/assets/19602424/73ada3f2-2d2e-4b76-b25c-34a52db6a069)
+![图片](https://github.com/apache/streampark/assets/19602424/73ada3f2-2d2e-4b76-b25c-34a52db6a069)
 
 #### 2.4 将 gpg 公钥添加到 Apache SVN 项目仓库的 KEYS 文件中
 
@@ -437,7 +437,7 @@ svn commit -m "release for StreamPark 2.1.0"
 
 > 在浏览器中访问 https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1/
 
-![图片](https://github.com/apache/incubator-streampark/assets/19602424/e4763537-af9f-4f2a-967d-912e6670b360)
+![图片](https://github.com/apache/streampark/assets/19602424/e4763537-af9f-4f2a-967d-912e6670b360)
 
 ## 3. 进入社区投票阶段
 
@@ -446,13 +446,13 @@ svn commit -m "release for StreamPark 2.1.0"
 发送社区投票邮件需要至少三个`+1`，且无`-1`。
 
 > `Send to`: dev@streampark.apache.org <br />
-> `Title`: [VOTE] Release Apache StreamPark (Incubating) 2.1.0 rc1 <br />
+> `Title`: [VOTE] Release Apache StreamPark 2.1.0 rc1 <br />
 > `Body`: 
 
 ```
 Hello StreamPark Community:
 
-This is a call for vote to release Apache StreamPark(Incubating) version release-2.1.0-RC1.
+This is a call for vote to release Apache StreamPark version release-2.1.0-RC1.
 
 Apache Streamark - Make stream processing easier! Easy-to-use streaming application development framework and operation platform.
 
@@ -466,7 +466,7 @@ Maven artifacts are available in a staging repository at:
 https://repository.apache.org/content/repositories/orgapachestreampark-1012/
 
 Git tag for the release:
-https://github.com/apache/incubator-streampark/releases/tag/v2.1.0-rc1
+https://github.com/apache/streampark/releases/tag/v2.1.0-rc1
 
 The artifacts signed with PGP key [05016886], corresponding to [muchunjin@apache.org], that can be found in keys file:
 https://downloads.apache.org/incubator/streampark/KEYS
@@ -507,13 +507,13 @@ Thanks!
 在72小时后，将统计投票结果，并发送投票结果邮件，如下所示。
 
 > `Send to`: dev@streampark.apache.org <br />
-> `Title`: [RESULT][VOTE] Release Apache StreamPark (Incubating) 2.1.0-rc1 <br />
+> `Title`: [RESULT][VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
 > `Body`:
 
 ```
 Dear StreamPark community,
 
-Thanks for your review and vote for "Release Apache StreamPark (Incubating) 2.1.0-rc1"
+Thanks for your review and vote for "Release Apache StreamPark 2.1.0-rc1"
 I'm happy to announce the vote has passed:
 
 
@@ -545,11 +545,11 @@ ChunJin Mu
 邮件内容中的一项是`Vote thread`，链接获取方式如下：<br />
 访问此地址 https://lists.apache.org/list.html?dev@streampark.apache.org ， 找到邮件标题并点击显示投票内容
 
-![图片](https://github.com/apache/incubator-streampark/assets/19602424/5755ed06-529f-4739-96a8-1ac13bbb21ea)
+![图片](https://github.com/apache/streampark/assets/19602424/5755ed06-529f-4739-96a8-1ac13bbb21ea)
 
 右键点击标题，点击复制链接地址获取链接
 
-![图片](https://github.com/apache/incubator-streampark/assets/19602424/1616da5b-7891-45cc-b956-a0ba5e7ce874)
+![图片](https://github.com/apache/streampark/assets/19602424/1616da5b-7891-45cc-b956-a0ba5e7ce874)
 
 #### 3.2 发送孵化社区投票邮件
 
@@ -557,14 +557,14 @@ ChunJin Mu
 
 > `Send to`: general@incubator.apache.org <br />
 > `cc`: dev@streampark.apache.org、tison@apache.org、willem.jiang@gmail.com <br />
-> `Title`: [VOTE] Release Apache StreamPark(Incubating) 2.1.0-rc1 <br />
+> `Title`: [VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
 > `Body`:
 
 ```
 Hello Incubator Community:
 
-This is a call for a vote to release Apache StreamPark(Incubating) version 2.1.0-RC1.
-The Apache StreamPark community has voted on and approved a proposal to release Apache StreamPark(Incubating) version 2.1.0-RC1.
+This is a call for a vote to release Apache StreamPark version 2.1.0-RC1.
+The Apache StreamPark community has voted on and approved a proposal to release Apache StreamPark version 2.1.0-RC1.
 We now kindly request the Incubator PMC members review and vote on this incubator release.
 Apache StreamPark, Make stream processing easier! Easy-to-use streaming application development framework and operation platform.
 
@@ -578,7 +578,7 @@ The release candidate:
 https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1/
 
 Git tag for the release:
-https://github.com/apache/incubator-streampark/releases/tag/v2.1.0-rc1
+https://github.com/apache/streampark/releases/tag/v2.1.0-rc1
 
 Maven artifacts are available in a staging repository at:
 https://repository.apache.org/content/repositories/orgapachestreampark-1012/
@@ -612,7 +612,7 @@ How to Build:
 
 Thanks,
 
-On behalf of Apache StreamPark(Incubating) community
+On behalf of Apache StreamPark community
 
 
 Best,
@@ -636,13 +636,13 @@ Chunjin Mu
 
 > `Send to`: general@incubator.apache.org <br />
 > `cc`: dev@streampark.apache.org、tison@apache.org、willem.jiang@gmail.com <br />
-> `Title`: [RESULT][VOTE] Release Apache StreamPark(Incubating) 2.1.0-rc1 <br />
+> `Title`: [RESULT][VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
 > `Body`:
 
 ```
 Hi all,
 
-Thanks for your review and vote for "Release Apache StreamPark (Incubating) 2.1.0-rc1"
+Thanks for your review and vote for "Release Apache StreamPark 2.1.0-rc1"
 I'm happy to announce the vote has passed:
 
 3 binding votes, no +0 or -1 votes.
@@ -668,7 +668,7 @@ ChunJin Mu
 邮件内容中的一项是`Vote thread`，链接获取方式如下：<br />
 访问此地址 https://lists.apache.org/list.html?general@incubator.apache.org ， 找到邮件标题并点击显示投票内容
 
-![图片](https://github.com/apache/incubator-streampark/assets/19602424/aea68925-7911-4413-8b2d-aea12685337f)
+![图片](https://github.com/apache/streampark/assets/19602424/aea68925-7911-4413-8b2d-aea12685337f)
 
 右键点击标题，点击复制链接地址获取链接
 
@@ -720,7 +720,7 @@ svn mv https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1 htt
 
 > 需要注意的是，下载链接可能需要一个小时后才会生效，请注意。
 
-![图片](https://github.com/apache/incubator-streampark/assets/19602424/e7900fb2-7bfc-4fa1-bd40-9806e6a822ef)
+![图片](https://github.com/apache/streampark/assets/19602424/e7900fb2-7bfc-4fa1-bd40-9806e6a822ef)
 
 #### 4.4 在github上生成release
 
@@ -738,7 +738,7 @@ Release-2.1.0-incubating
 release note: https://streampark.apache.org/download/release-note/2.1.0
 ```
 
-![图片](https://github.com/apache/incubator-streampark/assets/19602424/84723ff5-a295-471d-8265-1b8ef867c3d1)
+![图片](https://github.com/apache/streampark/assets/19602424/84723ff5-a295-471d-8265-1b8ef867c3d1)
 
 然后点击`Publish release`按钮。
 
@@ -748,13 +748,13 @@ release note: https://streampark.apache.org/download/release-note/2.1.0
 
 > `Send to`: general@incubator.apache.org <br />
 > `cc`: dev@streampark.apache.org <br />
-> `Title`: [ANNOUNCE] Release Apache StreamPark (Incubating) 2.1.0 <br />
+> `Title`: [ANNOUNCE] Release Apache StreamPark 2.1.0 <br />
 > `Body`:
 
 ```
 Hi all,
 
-We are glad to announce the release of Apache StreamPark(incubating) 2.1.0.
+We are glad to announce the release of Apache StreamPark 2.1.0.
 Once again I would like to express my thanks to your help.
 
 Apache StreamPark(https://streampark.apache.org/) - Make stream processing easier! Easy-to-use streaming application development framework and operation platform.
@@ -763,7 +763,7 @@ Download Links: https://streampark.apache.org/download/
 Release Notes: https://streampark.apache.org/download/release-note/2.1.0
 
 StreamPark Resources:
-- Issue: https://github.com/apache/incubator-streampark/issues
+- Issue: https://github.com/apache/streampark/issues
 - Mailing list: dev@streampark.apache.org
 
 - Apache StreamPark Team

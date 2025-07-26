@@ -179,7 +179,7 @@ If you initiate a posting vote, you can refer to this response example to reply 
 <font color="red">
 When replying to the email, you must bring the information that you have checked by yourself. Simply replying to `+1 approve` is invalid.
 
-When PPMC votes in the dev@streampark.apache.org streampark community, Please bring the binding suffix to indicate that it has a binding vote for the vote in the streampark community, and it is convenient to count the voting results.
+When PMC votes in the dev@streampark.apache.org streampark community, Please bring the binding suffix to indicate that it has a binding vote for the vote in the streampark community, and it is convenient to count the voting results.
 
 When IPMC votes in the general@incubator.apache.org incubator community. Please bring the binding suffix to indicate that the voting in the incubator community has a binding vote, which is convenient for counting the voting results.
 </font>
@@ -189,7 +189,7 @@ When IPMC votes in the general@incubator.apache.org incubator community. Please 
 If you have already voted on dev@streampark.apache.org, you can take it directly to the incubator community when you reply to the vote, such as:
 
 ```html
-//Incubator community voting, only IPMC members have binding binding，PPMC needs to be aware of binding changes
+//Incubator community voting, only IPMC members have binding binding，PMC needs to be aware of binding changes
 Forward my +1 from dev@listreamparknkis (non-binding)
 Copy my +1 from streampark DEV ML (non-binding)
 ````
@@ -197,7 +197,7 @@ Copy my +1 from streampark DEV ML (non-binding)
 :::
 
 
-Non-PPMC/Non-IPMC member:
+Non-PMC/Non-IPMC member:
 
 ```text
 +1 (non-binding)
@@ -209,7 +209,7 @@ I checked:
      5. 
 ````
 
-PPMC/IPMC member:
+PMC/IPMC member:
 
 ```text
 //Incubator community voting, only IPMC members have binding binding

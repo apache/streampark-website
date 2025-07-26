@@ -4,7 +4,7 @@
 
 [English](README.md) | [中文](README_ZH.md)
 
-这是包含 `http://streampark.apache.org` 的所有源代码的存储库。本指南将指导您如何为 Apache StreamPark™ (Incubating) 的网站做出贡献。
+这是包含 `http://streampark.apache.org` 的所有源代码的存储库。本指南将指导您如何为 Apache StreamPark™ 的网站做出贡献。
 
 ## 分支
 
@@ -17,7 +17,7 @@ dev 为默认主分支，修改请先 fork 到自己的仓库，然后切换到�
 运行以下命令下载网站源代码并在本地预览：
 
 ```shell
-git clone https://github.com/apache/incubator-streampark-website.git streampark-website
+git clone https://github.com/apache/streampark-website.git streampark-website
 cd streampark-website
 pnpm install
 pnpm run start

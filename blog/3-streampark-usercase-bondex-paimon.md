@@ -104,7 +104,7 @@ Continuing the characteristics of the Kappa architecture with a single stream pr
 
 This solution adopts Flink Application on K8s clusters, with Flink CDC for real-time ingestion of relational database data from business systems. Tasks for Flink + Paimon Streaming Data Warehouse are submitted through the StreamPark task platform, with the Trino engine ultimately used to access Finereport for service provision and developer queries. Paimon's underlying storage supports the S3 protocol, and as the company's big data services rely on Alibaba Cloud, Object Storage Service (OSS) is used as the data filesystem.
 
-[StreamPark](https://github.com/apache/incubator-streampark) is a real-time computing platform that leverages the powerful capabilities of [Paimon](https://github.com/apache/incubator-paimon) to process real-time data streams. This platform offers the following key features:
+[StreamPark](https://github.com/apache/streampark) is a real-time computing platform that leverages the powerful capabilities of [Paimon](https://github.com/apache/incubator-paimon) to process real-time data streams. This platform offers the following key features:
 
 **Real-time Data Processing: **StreamPark supports the submission of real-time data stream tasks, capable of real-time acquisition, transformation, filtering, and analysis of data. This is extremely important for applications that require rapid response to real-time data, such as real-time monitoring, real-time recommendations, and real-time risk control.
 
