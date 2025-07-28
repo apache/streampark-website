@@ -112,7 +112,7 @@ const config = {
         },
         items: [
           {
-            to: '/docs/get-started/intro',
+            to: '/docs/get-started/introduction',
             label: 'Docs',
             position: "right",
             activeBaseRegex: `/docs`,
@@ -160,7 +160,7 @@ const config = {
               },
               {
                 label: "Security",
-                to: "https://www.apache.org/security/",
+                to: "/community/security/",
               },
               {
                 label: "Sponsorship",

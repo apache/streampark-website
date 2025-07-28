@@ -30,7 +30,7 @@ StreamPark 项目的文档在一个单独的 [git 仓库](https://github.com/apa
 首先，您需要将文档项目 fork 到您自己的 github 仓库，然后将文`clone`到您的本地计算机。
 
 ```shell
-git clone git@github.com:<your-github-user-name>/incubator-streampark-website
+git clone git@github.com:<your-github-user-name>/streampark-website
 ```
 
 ## 预览和生成静态文件
@@ -38,7 +38,7 @@ git clone git@github.com:<your-github-user-name>/incubator-streampark-website
 此网站使用 node 进行编译，使用 Docusaurus 框架组件。
 
 1. 下载并安装 nodejs (版本>12.5.0)
-2. 将代码克隆到本地 `git clone git@github.com:apache/incubator-streampark-website.git`
+2. 将代码克隆到本地 `git clone git@github.com:apache/streampark-website.git`
 3. 运行 `npm install` 来安装所需的依赖库。
 4. 在根目录中运行 `npm run start`，您可以访问 http://localhost:3000 查看站点的英文模式预览
 5. 在根目录中运行 `npm run start-zh`，您可以访问 http://localhost:3000 查看站点的中文模式预览

@@ -19,6 +19,67 @@
 
 # shellcheck disable=SC2317
 
+# Bugzilla 37848: When no TTY is available, don't output to console
+have_tty=0
+# shellcheck disable=SC2006
+if [[ "`tty`" != "not a tty" ]]; then
+    have_tty=1
+fi
+
+# Bugzilla 37848: When no TTY is available, don't output to console
+have_tty=0
+# shellcheck disable=SC2006
+if [[ "`tty`" != "not a tty" ]]; then
+    have_tty=1
+fi
+
+ # Only use colors if connected to a terminal
+if [[ ${have_tty} -eq 1 ]]; then
+  PRIMARY=$(printf '\033[38;5;082m')
+  RED=$(printf '\033[31m')
+  GREEN=$(printf '\033[32m')
+  YELLOW=$(printf '\033[33m')
+  BLUE=$(printf '\033[34m')
+  BOLD=$(printf '\033[1m')
+  RESET=$(printf '\033[0m')
+else
+  PRIMARY=""
+  RED=""
+  GREEN=""
+  YELLOW=""
+  BLUE=""
+  BOLD=""
+  RESET=""
+fi
+
+echo_r () {
+    # Color red: Error, Failed
+    [[ $# -ne 1 ]] && return 1
+    # shellcheck disable=SC2059
+    printf "[%sStreamPark%s] %s$1%s\n"  $BLUE $RESET $RED $RESET
+}
+
+echo_g () {
+    # Color green: Success
+    [[ $# -ne 1 ]] && return 1
+    # shellcheck disable=SC2059
+    printf "[%sStreamPark%s] %s$1%s\n"  $BLUE $RESET $GREEN $RESET
+}
+
+echo_y () {
+    # Color yellow: Warning
+    [[ $# -ne 1 ]] && return 1
+    # shellcheck disable=SC2059
+    printf "[%sStreamPark%s] %s$1%s\n"  $BLUE $RESET $YELLOW $RESET
+}
+
+echo_w () {
+    # Color yellow: White
+    [[ $# -ne 1 ]] && return 1
+    # shellcheck disable=SC2059
+    printf "[%sStreamPark%s] %s$1%s\n"  $BLUE $RESET $WHITE $RESET
+}
+
 # OS specific support.  $var _must_ be set to either true or false.
 cygwin=false;
 darwin=false;
@@ -56,7 +117,7 @@ fi
 # For Mingw, ensure paths are in UNIX format before anything is touched
 if $mingw ; then
   [ -n "$JAVA_HOME" ] && [ -d "$JAVA_HOME" ] &&
-    JAVA_HOME="$(cd "$JAVA_HOME" || (echo "cannot cd into $JAVA_HOME."; exit 1); pwd)"
+    JAVA_HOME="$(cd "$JAVA_HOME" || (echo_r "cannot cd into $JAVA_HOME."; exit 1); pwd)"
 fi
 
 if [ -z "$JAVA_HOME" ]; then
@@ -93,13 +154,13 @@ if [ -z "$JAVACMD" ] ; then
 fi
 
 if [ ! -x "$JAVACMD" ] ; then
-  echo "Error: JAVA_HOME is not defined correctly." >&2
-  echo "  We cannot execute $JAVACMD" >&2
+  echo_r "Error: JAVA_HOME is not defined correctly." >&2
+  echo_r "  We cannot execute $JAVACMD" >&2
   exit 1
 fi
 
 if [ -z "$JAVA_HOME" ] ; then
-  echo "Warning: JAVA_HOME environment variable is not set."
+  echo_w "Warning: JAVA_HOME environment variable is not set."
 fi
 
 _RUNJAVA="$JAVA_HOME/bin/java"
@@ -141,14 +202,14 @@ download() {
     wget "$url" -O "$path" || rm -f "$path"
     # shellcheck disable=SC2181
     if [[ $? -ne 0 ]]; then
-      echo "download $name failed, please try again."
+      echo_r "download $name failed, please try again."
       exit 1
     fi
   elif command -v curl > /dev/null; then
     curl -o "$path" "$url" -f -L || rm -f "$path"
     # shellcheck disable=SC2181
     if [[ $? -ne 0 ]]; then
-      echo "download $name failed, please try again."
+      echo_r "download $name failed, please try again."
       exit 1
     fi
   else
@@ -179,7 +240,7 @@ download() {
     "$JAVA_HOME/bin/java" -cp "${WORK_DIR}" Downloader "$url" "$path" && rm -f "${WORK_DIR}"/Downloader.class
 
     if [[ $? -ne 0 ]]; then
-      echo "download $name failed, please try again."
+      echo_r "download $name failed, please try again."
       exit 1
     fi
   fi
@@ -188,7 +249,7 @@ download() {
 BASH_UTIL="org.apache.streampark.console.base.util.BashJavaUtils"
 
 # 1). download streampark.
-echo "download streampark..."
+echo_g "download streampark..."
 
 download "$SP_URL" "$SP_TAR" "$SP_PATH"
 tar -xvf "${SP_TAR}" >/dev/null 2>&1 \
@@ -221,7 +282,7 @@ else
   FLINK_PATH="${WORK_DIR}"/"${FLINK_TAR}"
 
   # 1) download flink
-  echo "download flink..."
+  echo_g "download flink..."
   download "$FLINK_URL" "$FLINK_TAR" "$FLINK_PATH"
   tar -xvf "${FLINK_TAR}" >/dev/null 2>&1 \
     && rm -r "${FLINK_TAR}" \
@@ -231,11 +292,11 @@ else
   FLINK_PORT=$($_RUNJAVA -cp "${SP_HOME}/lib/*" $BASH_UTIL --free_port "8081")
   $_RUNJAVA -cp "${SP_HOME}/lib/*" $BASH_UTIL --replace "$SP_CONFIG" "# port: 8081||port: ${FLINK_PORT}"
 
-  bash +x "${FLINK_HOME}"/bin/start-cluster.sh
+  "${FLINK_HOME}"/bin/start-cluster.sh
 fi
 
 # 3) start streampark
-bash +x "${SP_HOME}"/bin/startup.sh \
+exec "${SP_HOME}"/bin/startup.sh \
   --quickstart flink_home="$FLINK_HOME" \
   --quickstart flink_port="$FLINK_PORT" \
   --quickstart flink_name="quickstart-$FLINK_NAME"

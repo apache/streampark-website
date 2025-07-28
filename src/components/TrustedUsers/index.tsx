@@ -1,25 +1,21 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { useColorMode, useThemeConfig } from '@docusaurus/theme-common';
+import { useColorMode } from '@docusaurus/theme-common';
 import config from './languages.json';
-// import images from './images.json';
 import row1 from './row1.json';
 import row2 from './row2.json';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Marquee from 'react-fast-marquee';
 import styles from './styles.module.css';
 import RightArrowIcon from '@site/static/icons/arrow-right.svg';
 import { useTranslation } from '@site/src/hooks/useTranslation';
+import SectionTitle from "@site/src/components/SectionTitle";
 
 export default function TrustedUsers() {
   const { t, language } = useTranslation(config);
 
   const { colorMode } = useColorMode();
-
-  // const row1 = images.slice(0, images.length / 2);
-  // const row2 = images.slice(images.length / 2);
 
   const gradientColor = colorMode === 'dark' ? '#1f1f1c' : '#fff';
 
@@ -27,11 +23,7 @@ export default function TrustedUsers() {
     <BrowserOnly>
       {() => (
         <section className={styles['trusted-users']}>
-          {/* <h3 className={styles['title']}>{ t.users.title }</h3>
-          <hr
-            className="divider my-4 mx-auto"
-            style={{ maxWidth: '10rem' }}
-          /> */}
+          <SectionTitle title={t.users.title}/>
           <div data-aos="slide-left">
             <Marquee
               direction="left"
@@ -48,8 +40,8 @@ export default function TrustedUsers() {
                   <img
                     src={
                       colorMode === 'dark'
-                        ? useBaseUrl('/home/brands/plain/' + img.imgUrl)
-                        : useBaseUrl('/home/brands/colorful/' + img.imgUrl)
+                        ? useBaseUrl('/home/user/dark/' + img.imgUrl)
+                        : useBaseUrl('/home/user/light/' + img.imgUrl)
                     }
                     alt={img.imgUrl}
                   />
@@ -74,8 +66,8 @@ export default function TrustedUsers() {
                   <img
                     src={
                       colorMode === 'dark'
-                        ? useBaseUrl('/home/brands/plain/' + img.imgUrl)
-                        : useBaseUrl('/home/brands/colorful/' + img.imgUrl)
+                        ? useBaseUrl('/home/user/dark/' + img.imgUrl)
+                        : useBaseUrl('/home/user/light/' + img.imgUrl)
                     }
                     alt={img.imgUrl}
                   />
@@ -83,7 +75,6 @@ export default function TrustedUsers() {
               ))}
             </Marquee>
           </div>
-
           <div className={styles['more-link']}>
             <a
               href={language === 'zh-CN' ? '/zh-CN/user' : '/user'}

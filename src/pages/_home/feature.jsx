@@ -13,7 +13,6 @@ export default function CoreFeatures() {
       <div className="container">
         <SectionTitle
           title={t.common.coreFeatures}
-          description={t.common.coreFeaturesDesc}
         />
         <div className="row justify-content-center">
           {t.feature.map((feature, i) => (

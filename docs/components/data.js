@@ -112,4 +112,27 @@ export default {
         {name: 'MySQL', version: '5.6 +', required: false, other: null},
         {name: 'Hadoop', version: '2 +', required: false, other: 'Optional, If on yarn, hadoop envs is required.'},
     ],
+
+    QuickStartEnvs:  [
+        {name: 'Operating System', version: 'Linux/MacOS', other: 'MacOS'},
+        {name: 'Java', version: 'JDK version >=1.8', other: '1.8.0_362'},
+        {name: 'Scala', version: 'Scala version >=2.12', other: '2.12.18'},
+        {name: 'Flink', version: 'Flink version >= 1.12', other: '1.19.0'},
+        {name: 'StreamPark Package', version: 'Any version', other: '2.1.5'},
+    ],
+
+    installationEnvs: [
+        {name: 'Operating System', version: 'Linux/MacOS', required: true, other: 'Windows is not supported'},
+        {name: 'Java', version: '1.8+', required: true, other: 'Java version >=1.8'},
+        {name: 'Scala', version: '2.12+', required: true, other: 'Scala version >=2.12'},
+        {name: 'Database', version: 'MySQL: 5.6+, Postgresql: 9.6+', required: false, other: 'Defaults to H2 database, supports MySQL and Postgresql'},
+        {name: 'Flink', version: '1.12+', required: false, other: 'Minimum supported Flink version is 1.12'},
+        {name: 'Hadoop', version: '2+', required: false, other: 'Optional, required for YARN deployment'},
+        {name: 'Kubernetes', version: '1.16+', required: false, other: 'Optional, required for Kubernetes deployment'}
+    ],
+
+    dockerInstallationEnvs:  [
+        {name: 'Docker', version: '1.13.1+', required: true, other: 'Docker version must be at least 1.13.1'},
+        {name: 'Docker Compose', version: '1.28.0+', required: true, other: 'Docker Compose version must be at least 1.28.0'},
+    ],
 }

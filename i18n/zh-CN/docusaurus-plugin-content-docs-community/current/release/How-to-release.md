@@ -137,16 +137,16 @@ gpg:              unchanged: 1
 
 或者进入 https://keyserver.ubuntu.com/ 网址，输入密钥的名称，然后点击'Search key'
 
-![图片](https://github.com/apache/streampark/assets/19602424/b8fe193e-c137-42b0-a833-90a6d975f335)
+![key-server.png](/doc/image/release/key-server.png)
 
 如果查询结果如下，表示密钥创建成功。
 
-![图片](https://github.com/apache/streampark/assets/19602424/73ada3f2-2d2e-4b76-b25c-34a52db6a069)
+![Search Key](/doc/image/release/search-key.png)
 
 #### 2.4 将 gpg 公钥添加到 Apache SVN 项目仓库的 KEYS 文件中
 
-- Apache StreamPark Dev分支 https://dist.apache.org/repos/dist/dev/incubator/streampark
-- Apache StreamPark Release分支 https://dist.apache.org/repos/dist/release/incubator/streampark/
+- Apache StreamPark Dev分支 https://dist.apache.org/repos/dist/dev/streampark
+- Apache StreamPark Release分支 https://dist.apache.org/repos/dist/release/streampark/
 
 ##### 2.4.1 将公钥添加到dev分支的KEYS
 
@@ -154,7 +154,7 @@ gpg:              unchanged: 1
 $ mkdir -p streampark_svn/dev
 $ cd streampark_svn/dev
 
-$ svn co https://dist.apache.org/repos/dist/dev/incubator/streampark
+$ svn co https://dist.apache.org/repos/dist/dev/streampark
 $ cd streampark_svn/dev/streampark
 
 # 将生成的KEY追加到KEYS文件中，检查是否添加正确
@@ -169,7 +169,7 @@ $ svn ci -m "add gpg key for muchunjin"
 $ mkdir -p streampark_svn/release
 $ cd streampark_svn/release
 
-$ svn co https://dist.apache.org/repos/dist/release/incubator/streampark/
+$ svn co https://dist.apache.org/repos/dist/release/streampark/
 $ cd streampark_svn/release/streampark
 
 # 将生成的KEY追加到KEYS文件中，检查是否添加正确
@@ -240,16 +240,16 @@ $ mvn --encrypt-password <apache passphrase>
   </profiles>
 ```
 
-## 3. 准备物料 & 发布到Apache Nexus
+## 3. 准备物料 & 发布到 Apache Nexus
 
 #### 3.1 基于 dev 分支，创建一个名为 `release-${release_version}-rcx` 的分支，例如 release-2.1.0-rc1。并基于 release-2.1.0-rc1 分支创建一个名为 v2.1.0-rc1 的标签，并将此标签设置为预发布。
 
-![图片](https://user-images.githubusercontent.com/19602424/236656362-1d346faa-6582-44eb-9722-8bb2de0eaa92.png)
+![New Branches](/doc/image/release/new-branches.png)
 
 #### 3.2 克隆发布分支到本地
 
 ```shell
-git clone -b release-2.1.0-rc1 -c core.autocrlf=false git@github.com:apache/incubator-streampark.git
+git clone -b release-2.1.0-rc1 -c core.autocrlf=false git@github.com:apache/streampark.git
 ```
 
 #### 3.3 发布相关JAR到Apache Nexus
@@ -304,11 +304,11 @@ mvn deploy \
 -DretryFailedDeploymentCount=3
 ```
 
-##### 3.3.3 检查是否成功发布到Apache Nexus仓库
+##### 3.3.3 检查是否成功发布到 Apache Nexus 仓库
 
 > 访问 https://repository.apache.org/ 并登录，如果有scala 2.11、scala 2.12，说明发布成功。
 
-![图片](https://user-images.githubusercontent.com/19602424/236657233-08d142eb-5f81-427b-a04d-9ab3172199c1.png)
+![Apache Maven](/doc/image/release/asf-repo.png)
 
 #### 3.4 编译二进制包
 
@@ -404,9 +404,9 @@ apache-streampark_2.12-2.1.0-incubating-bin.tar.gz: OK
 
 ```shell
 # 检出Apache SVN仓库中的dev目录到Apache StreamPark™项目根目录下的dist/streampark_svn_dev目录下
-# svn co https://dist.apache.org/repos/dist/dev/incubator/streampark dist/streampark_svn_dev
+# svn co https://dist.apache.org/repos/dist/dev/streampark dist/streampark_svn_dev
 
-svn co --depth empty https://dist.apache.org/repos/dist/dev/incubator/streampark dist/streampark_svn_dev
+svn co --depth empty https://dist.apache.org/repos/dist/dev/streampark dist/streampark_svn_dev
 ```
 
 创建一个版本号目录，并以 `${release_version}-${RC_version}` 的形式命名。RC_version从1开始，即候选版本从RC1开始。在发布过程中，如果出现导致投票失败的问题，需要进行修正，那么RC版本需要迭代，RC版本号需要+1。例如：为版本2.1.0-RC1投票。如果投票顺利通过，那么RC1版本的资料将作为最终版本的资料发布。如果出现问题（当streampark/incubator社区进行投票时，投票者会严格检查各种发布要求和合规问题）并需要纠正，那么修正后重新启动投票，下一次的候选版本为2.1.0-RC2。
@@ -433,11 +433,11 @@ svn status
 svn commit -m "release for StreamPark 2.1.0"
 ```
 
-#### 3.7 检查Apache SVN提交结果
+#### 3.7 检查 Apache SVN 提交结果
 
-> 在浏览器中访问 https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1/
+> 在浏览器中访问 https://dist.apache.org/repos/dist/dev/streampark/2.1.0-RC1/
 
-![图片](https://github.com/apache/streampark/assets/19602424/e4763537-af9f-4f2a-967d-912e6670b360)
+![Check Apache SVN](/doc/image/release/check-apache-svn.png)
 
 ## 3. 进入社区投票阶段
 
@@ -446,6 +446,7 @@ svn commit -m "release for StreamPark 2.1.0"
 发送社区投票邮件需要至少三个`+1`，且无`-1`。
 
 > `Send to`: dev@streampark.apache.org <br />
+> `cc`: private@streampark.apache.org <br />
 > `Title`: [VOTE] Release Apache StreamPark 2.1.0 rc1 <br />
 > `Body`: 
 
@@ -460,7 +461,7 @@ Release notes:
 https://streampark.apache.org/download/release-note/2.1.0/
 
 The release candidates:
-https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1/
+https://dist.apache.org/repos/dist/dev/streampark/2.1.0-RC1/
 
 Maven artifacts are available in a staging repository at:
 https://repository.apache.org/content/repositories/orgapachestreampark-1012/
@@ -469,7 +470,7 @@ Git tag for the release:
 https://github.com/apache/streampark/releases/tag/v2.1.0-rc1
 
 The artifacts signed with PGP key [05016886], corresponding to [muchunjin@apache.org], that can be found in keys file:
-https://downloads.apache.org/incubator/streampark/KEYS
+https://downloads.apache.org/streampark/KEYS
 
 The vote will be open for at least 72 hours or until the necessary number of votes are reached.
 
@@ -498,7 +499,7 @@ https://streampark.apache.org/community/release/how_to_verify_release
 
 How to Build:
 
-1.cd incubator-streampark
+1.cd streampark
 2.sh ./build.sh
 
 Thanks!
@@ -507,6 +508,7 @@ Thanks!
 在72小时后，将统计投票结果，并发送投票结果邮件，如下所示。
 
 > `Send to`: dev@streampark.apache.org <br />
+> `cc`: private@streampark.apache.org <br />
 > `Title`: [RESULT][VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
 > `Body`:
 
@@ -545,84 +547,12 @@ ChunJin Mu
 邮件内容中的一项是`Vote thread`，链接获取方式如下：<br />
 访问此地址 https://lists.apache.org/list.html?dev@streampark.apache.org ， 找到邮件标题并点击显示投票内容
 
-![图片](https://github.com/apache/streampark/assets/19602424/5755ed06-529f-4739-96a8-1ac13bbb21ea)
-
-右键点击标题，点击复制链接地址获取链接
-
-![图片](https://github.com/apache/streampark/assets/19602424/1616da5b-7891-45cc-b956-a0ba5e7ce874)
-
-#### 3.2 发送孵化社区投票邮件
-
-发送孵化社区投票邮件需要至少三个`+1`，且无`-1`。
-
-> `Send to`: general@incubator.apache.org <br />
-> `cc`: dev@streampark.apache.org、tison@apache.org、willem.jiang@gmail.com <br />
-> `Title`: [VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
-> `Body`:
-
-```
-Hello Incubator Community:
-
-This is a call for a vote to release Apache StreamPark version 2.1.0-RC1.
-The Apache StreamPark community has voted on and approved a proposal to release Apache StreamPark version 2.1.0-RC1.
-We now kindly request the Incubator PMC members review and vote on this incubator release.
-Apache StreamPark, Make stream processing easier! Easy-to-use streaming application development framework and operation platform.
-
-StreamPark community vote thread:
-https://lists.apache.org/thread/t01b2lbtqzyt7j4dsbdp5qjc3gngjsdq
-
-Vote result thread:
-https://lists.apache.org/thread/t5z58mvrs1drgzfyc48c9lhmd8skswn7
-
-The release candidate:
-https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1/
-
-Git tag for the release:
-https://github.com/apache/streampark/releases/tag/v2.1.0-rc1
-
-Maven artifacts are available in a staging repository at:
-https://repository.apache.org/content/repositories/orgapachestreampark-1012/
-
-The artifacts signed with PGP key [05016886], corresponding to [muchunjin@apache.org], that can be found in keys file:
-https://downloads.apache.org/incubator/streampark/KEYS
-
-The vote will be open for at least 72 hours or until the necessary number of votes are reached.
-
-Please vote accordingly:
-[ ] +1 approve
-[ ] +0 no opinion
-[ ] -1 disapprove with the reason
-
-More detailed checklist please refer:
-• https://cwiki.apache.org/confluence/display/INCUBATOR/Incubator+Release+Checklist
-
-Steps to validate the release， Please refer to:
-• https://www.apache.org/info/verification.html
-• https://streampark.apache.org/community/release/how-to-verify
-
-
-How to Build:
-
-1) clone source code:
-> git clone -b v2.1.0-rc1 git@github.com:apache/incubator-streampark.git
-
-2) build project:
-> cd incubator-streampark && sh ./build.sh
-
-
-Thanks,
-
-On behalf of Apache StreamPark community
-
-
-Best,
-ChunJin Mu
-```
+![Vote Thread](/doc/image/release/mail-list.png)
 
 如果72小时后没有-1，回复邮件如下
 
-> `Send to`: general@incubator.apache.org <br />
-> `cc`: dev@streampark.apache.org <br />
+> `Send to`: dev@incubator.apache.org <br />
+> `cc`: private@streampark.apache.org <br />
 > `Body`:
 
 ```
@@ -634,8 +564,8 @@ Chunjin Mu
 
 然后将统计投票结果，并发送投票结果邮件，如下所示。
 
-> `Send to`: general@incubator.apache.org <br />
-> `cc`: dev@streampark.apache.org、tison@apache.org、willem.jiang@gmail.com <br />
+> `Send to`: dev@incubator.apache.org <br />
+> `cc`: private@streampark.apache.org <br />
 > `Title`: [RESULT][VOTE] Release Apache StreamPark 2.1.0-rc1 <br />
 > `Body`:
 
@@ -666,9 +596,9 @@ ChunJin Mu
 ```
 
 邮件内容中的一项是`Vote thread`，链接获取方式如下：<br />
-访问此地址 https://lists.apache.org/list.html?general@incubator.apache.org ， 找到邮件标题并点击显示投票内容
+访问此地址 https://lists.apache.org/list.html?dev@streampark.apache.org ， 找到邮件标题并点击显示投票内容
 
-![图片](https://github.com/apache/streampark/assets/19602424/aea68925-7911-4413-8b2d-aea12685337f)
+![Vote Thread](/doc/image/release/mail-list.png)
 
 右键点击标题，点击复制链接地址获取链接
 
@@ -679,7 +609,7 @@ ChunJin Mu
 #### 4.1 迁移源代码和二进制包
 
 ```shell
-svn mv https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1 https://dist.apache.org/repos/dist/release/incubator/streampark/2.1.0  -m "transfer packages for 2.1.0-RC1"
+svn mv https://dist.apache.org/repos/dist/dev/streampark/2.1.0-RC1 https://dist.apache.org/repos/dist/release/streampark/2.1.0  -m "transfer packages for 2.1.0-RC1"
 ```
 
 #### 4.2 发布版本到Apache Staging仓库
@@ -720,7 +650,7 @@ svn mv https://dist.apache.org/repos/dist/dev/incubator/streampark/2.1.0-RC1 htt
 
 > 需要注意的是，下载链接可能需要一个小时后才会生效，请注意。
 
-![图片](https://github.com/apache/streampark/assets/19602424/e7900fb2-7bfc-4fa1-bd40-9806e6a822ef)
+![Download](/doc/image/release/download.png)
 
 #### 4.4 在github上生成release
 
@@ -738,7 +668,7 @@ Release-2.1.0-incubating
 release note: https://streampark.apache.org/download/release-note/2.1.0
 ```
 
-![图片](https://github.com/apache/streampark/assets/19602424/84723ff5-a295-471d-8265-1b8ef867c3d1)
+![Tag](/doc/image/release/tag.png)
 
 然后点击`Publish release`按钮。
 
@@ -746,8 +676,8 @@ release note: https://streampark.apache.org/download/release-note/2.1.0
 
 #### 4.5 发送新版本公告邮件
 
-> `Send to`: general@incubator.apache.org <br />
-> `cc`: dev@streampark.apache.org <br />
+> `Send to`: dev@streampark.apache.org <br />
+> `cc`: private@streampark.apache.org <br />
 > `Title`: [ANNOUNCE] Release Apache StreamPark 2.1.0 <br />
 > `Body`:
 

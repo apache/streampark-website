@@ -30,7 +30,7 @@ Documentation for the StreamPark project is maintained in a separate [git reposi
 First you need to fork the document project into your own github repository, and then clone the document to your local computer.
 
 ```shell
-git clone git@github.com:<your-github-user-name>/incubator-streampark-website
+git clone git@github.com:<your-github-user-name>/streampark-website
 ```
 
 ## Preview and generate static files
@@ -38,7 +38,7 @@ git clone git@github.com:<your-github-user-name>/incubator-streampark-website
 This website is compiled using node, using Docusaurus framework components
 
 1. Download and install nodejs (version>12.5.0)
-2. Clone the code to the local `git clone git@github.com:apache/incubator-streampark-website.git`
+2. Clone the code to the local `git clone git@github.com:apache/streampark-website.git`
 3. Run `npm install` to install the required dependent libraries.
 4. Run `npm run start` in the root directory, you can visit http://localhost:3000 to view the English mode preview of the site
 5. Run `npm run start-zh` in the root directory, you can visit http://localhost:3000 to view the Chinese mode preview of the site

@@ -20,21 +20,13 @@ export default function FeatureCard(props: Props) {
     <div className={clsx(styles['feature-card-wrapper'], props.className)}>
       <div
         className={clsx(styles['feature-card'])}
-        data-aos="fade-up"
+        data-aos='fade-up'
         data-aos-delay={props.animationDelay}
         style={props.style}
       >
         <div className={styles['feature-icon-wrapper']}>
-          <div
-            className={styles['feature-icon']}
-            // style={
-            //   {
-            //     '--feature-icon-color': props.color || '#ad67f7',
-            //     '--feature-icon-shadow': shadowColor,
-            //   } as React.CSSProperties
-            // }
-          >
-            <i className={props.icon}></i>
+          <div className={styles['feature-icon']}>
+            <div className="w-6 h-6">{props.icon}</div>
           </div>
         </div>
         <div className={clsx(styles['feature-body'])}>

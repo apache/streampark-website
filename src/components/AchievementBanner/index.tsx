@@ -62,7 +62,7 @@ export default function AchievementBanner(props: AchievementBannerProps) {
   }
 
   function fetchGithubState() {
-    fetch('https://api.github.com/repos/apache/incubator-streampark')
+    fetch('https://api.github.com/repos/apache/streampark')
       .then((res) => res.json())
       .then((data) => {
         setGitHubState((state) => ({
@@ -73,7 +73,7 @@ export default function AchievementBanner(props: AchievementBannerProps) {
         cacheGithubState();
       });
 
-    fetch('https://api.github.com/repos/apache/incubator-streampark/releases')
+    fetch('https://api.github.com/repos/apache/streampark/releases')
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

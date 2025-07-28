@@ -10,7 +10,7 @@ async function githubInfo(context, opts) {
       // The loadContent hook is executed after siteConfig and env has been loaded.
       // You can return a JavaScript object that will be passed to contentLoaded hook.
       const githubData = await fetch(
-        'https://api.github.com/repos/apache/incubator-streampark'
+        'https://api.github.com/repos/apache/streampark'
       )
       const data = await githubData.json()
       const stars = data?.stargazers_count ?? 31000

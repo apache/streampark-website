@@ -117,4 +117,26 @@ export default {
         {name: 'Hadoop', version: '2 +', required: false, other: '可选,如果部署flink on yarn 需要配置hadoop环境变量.'},
     ],
 
+    QuickStartEnvs:  [
+        {name: '操作系统', version: 'Linux/MacOS', other: 'MacOS'},
+        {name: 'Java', version: 'JDK version >=1.18',  other: '1.8.0_362'},
+        {name: 'Scala', version: 'Scala version >=2.12', other: '2.12.18'},
+        {name: 'Flink', version: 'Flink version >= 1.12', other: '1.19.0'},
+        {name: 'StreamPark安装包', version: '任意版本', other: '2.1.5'},
+    ],
+
+    installationEnvs:  [
+        {name: '操作系统', version: 'Linux/MacOS',required: true, other: '不支持 Windows 系统'},
+        {name: 'Java', version: '1.18+',required: true,  other: 'Java version >=1.8'},
+        {name: 'Scala', version: '2.12+',required: true, other: 'Scala version >=2.12'},
+        {name: '数据库', version: 'MySQL: 5.6+、Postgresql: 9.6+',required: false, other: '默认使用 H2 数据库，支持 MySQL 和 Postgresql'},
+        {name: 'Flink', version: '1.12+ ',required: false, other: 'Flink 版本最低支持1.12'},
+        {name: 'Hadoop', version: '2+ ',required: false, other: '非必须，如果部署作业至 Yarn，需要准备 Hadoop 环境'},
+        {name: 'Kubernetes', version: '1.16+ ',required: false, other: '非必须，如果部署作业至 Kubernetes，需要准备 Kubernetes 集群'},
+    ],
+
+    dockerInstallationEnvs:  [
+        {name: 'Docker', version: '1.13.1+',required: true, other: 'Docker版本不低于1.13.1'},
+        {name: 'Docker Compose', version: '1.28.0+',required: true,  other: 'Docker Compose版本不低于1.28.0'},
+    ],
 }

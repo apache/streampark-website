@@ -2,7 +2,6 @@ import React from 'react';
 
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Coding from '@site/static/home/coding.svg';
 
 import config from './languages.json';
 import './styles.less';
@@ -53,45 +52,16 @@ export default function () {
               <img
                 src={
                   colorMode === 'dark'
-                    ? useBaseUrl('/home/coder2.png')
-                    : useBaseUrl('/home/coder1.png')
+                  ? useBaseUrl('/home/code2.png')
+                  : useBaseUrl('/home/code1.png')
                 }
                 className="coder"
-                width="70%"
+                width="100%"
               ></img>
             </div>
           </div>
         </div>
         <div className="border-dot"></div>
-        <div className="row mb-5 mt-5 mb-lg-7">
-          <div className="col-md-6 col-sm-12 align-self-center">
-            <div
-              className="px-5 px-md-7 mb-5 my-lg-0 coder-bg"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <Coding className="img-fluid-coding" />
-            </div>
-          </div>
-
-          <div className="col-md-6 col-sm-12">
-            <div
-              className="mb-5 my-lg-0 coder-bg"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <img
-                src={
-                  colorMode === 'dark'
-                    ? useBaseUrl('/home/code2.png')
-                    : useBaseUrl('/home/code1.png')
-                }
-                className="code"
-                alt="QuickStart DataStream"
-              ></img>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

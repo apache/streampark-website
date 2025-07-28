@@ -8,6 +8,6 @@ The current community E2E test has not yet reached full coverage, so this docume
 
 The E2E test pages are currently divided into four pages: Project Management, Resource Center, DataSource, and Security Center.
 
-Contributors can find the task by going to GitHub, searching for [apache/incubator-streampark](https://github.com/apache/streampark), and then searching for `e2e` in the [issue list](https://github.com/apache/streampark/issues?q=is%3Aissue+is%3Aopen+e2e). As shown below.
+Contributors can find the task by going to GitHub, searching for [apache/streampark](https://github.com/apache/streampark), and then searching for `e2e` in the [issue list](https://github.com/apache/streampark/issues?q=is%3Aissue+is%3Aopen+e2e). As shown below.
 
 For more information on e2e development, please refer to the [E2E](https://github.com/apache/streampark/blob/dev/streampark-e2e/README.md).

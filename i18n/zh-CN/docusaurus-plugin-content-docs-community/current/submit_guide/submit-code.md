@@ -26,7 +26,7 @@ sidebar_position: 2
 2. 将你的仓库 Clone 到本地设备：
 
     ```shell
-    git clone https://github.com/<your-github-id>/incubator-streampark.git
+    git clone https://github.com/<your-github-id>/streampark.git
     ```
 
 3. 添加远程仓库地址：

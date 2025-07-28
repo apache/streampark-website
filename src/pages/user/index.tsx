@@ -9,7 +9,6 @@ import Layout from '@theme/Layout';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useColorMode } from '@docusaurus/theme-common';
-import SectionTitle from '@site/src/components/SectionTitle';
 
 export default function () {
   const isBrowser = useIsBrowser();
@@ -63,7 +62,7 @@ export default function () {
 }
 
 interface BrandCardProps {
-  img: { imgUrl: string; linkid: string };
+  img: { imgUrl: string };
   aosDelay: number;
 }
 
@@ -75,18 +74,18 @@ function BrandCard({ img, aosDelay }: BrandCardProps) {
   React.useEffect(() => {
     setImgUrl(
       colorMode === 'dark'
-        ? '/home/brands/plain/' + img.imgUrl
-        : '/home/brands/colorful/' + img.imgUrl,
+        ? '/home/user/dark/' + img.imgUrl
+        : '/home/user/light/' + img.imgUrl,
     );
   }, [colorMode]);
 
   function handleMouseEnter() {
-    setImgUrl(`/home/brands/plain/${img.imgUrl}`);
+    setImgUrl(`/home/user/dark/${img.imgUrl}`);
   }
 
   function handleMouseLevel() {
-    const dir = colorMode === 'dark' ? 'plain' : 'colorful';
-    setImgUrl(`/home/brands/${dir}/${img.imgUrl}`);
+    const dir = colorMode === 'dark' ? 'dark' : 'light';
+    setImgUrl(`/home/user/${dir}/${img.imgUrl}`);
   }
 
   return (
@@ -96,16 +95,9 @@ function BrandCard({ img, aosDelay }: BrandCardProps) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLevel}
     >
-      <a
-        href={'https://github.com/apache/streampark/issues/163#issuecomment-'.concat(
-          img.linkid,
-        )}
-        target="_blank"
-      >
-        <div className="case_item case_hover">
-          <img src={useBaseUrl(imgUrl)} alt={img.imgUrl} />
-        </div>
-      </a>
+      <div className="case_item case_hover">
+        <img src={useBaseUrl(imgUrl)} alt={img.imgUrl} />
+      </div>
     </div>
   );
 }

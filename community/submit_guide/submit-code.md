@@ -26,7 +26,7 @@ sidebar_position: 2
 2. Clone your repository to your local:
 
     ```shell
-    git clone https://github.com/<your-github-id>/incubator-streampark.git
+    git clone https://github.com/<your-github-id>/streampark.git
     ```
 
 3. Add remote repository address, name it upstream:
