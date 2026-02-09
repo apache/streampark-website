@@ -173,4 +173,50 @@
         margin-bottom: 1.15em;
         opacity: 0.25;
     }
+
+    @media (max-width: 768px) {
+    .bloghome__posts-list {
+      grid-template-columns: 1fr;
+      padding: 0 1em 2em;
+
+      .post__list-item {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "title"
+          "tags"
+          "date";
+        row-gap: 0.75em;
+      }
+
+      .post__list-title {
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+    }
+
+    .post__list-tags {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .bloghome__posts-list {
+      gap: 10px;
+
+      .post__list-item {
+        padding: 0.75em 0.9em;
+      }
+
+      .post__list-title {
+        font-size: 0.95rem;
+      }
+    }
+
+    .post__list-date {
+      font-size: 0.75rem;
+      opacity: 0.8;
+    }
+  }
+
 }
